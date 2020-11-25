@@ -6,7 +6,7 @@ class TestCustomer(unittest.TestCase):
     def setUp(self):
         self.customer_1 = Customer("Skye", 50.00, 19)
         self.customer_2 = Customer("David", 25.00, 17)
-        self.drink = Drink("Mojito", 8.00)
+        self.drink = Drink("Mojito", 8.00, 6)
 
     def test_customer_has_name(self):
         self.assertEqual("Skye", self.customer_1.name)
@@ -16,4 +16,7 @@ class TestCustomer(unittest.TestCase):
 
     def test_customer_has_age(self):
         self.assertEqual(19, self.customer_1.age)
+
+    def test_customer_drunkenness(self):
+        self.assertEqual(6, self.customer_1.increase_drunkenness(self.drink))
 

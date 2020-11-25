@@ -12,3 +12,9 @@ class Pub:
             return True
         else:
             return False
+
+    def assess_drunkenness(self, customer_name):
+        if customer_name.drunkenness >= 12:
+            return "Sorry, you're too drunk"
+        else:
+            return "You're boring and sober"
