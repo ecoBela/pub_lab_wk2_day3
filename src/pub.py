@@ -6,3 +6,9 @@ class Pub:
 
     def add_to_till(self, drink):
         return self.till + drink.price
+
+    def check_age(self, customer_name):
+        if customer_name.age >= 18:
+            return True
+        else:
+            return False
