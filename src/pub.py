@@ -3,3 +3,6 @@ class Pub:
         self.name = name
         self.till = till
         self.drink = []
+
+    def add_to_till(self, drink):
+        return self.till + drink.price
