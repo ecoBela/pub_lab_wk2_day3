@@ -1,5 +1,6 @@
 import unittest
 from src.pub import Pub #capital P because class names always begin with capital letter
+from src.drink import Drink
 
 class TestPub(unittest.TestCase):#these parameters tell python this is a test, and not a normal class
     def setUp(self):
