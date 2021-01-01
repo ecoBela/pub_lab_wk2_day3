@@ -17,6 +17,9 @@ class TestPub(unittest.TestCase):#these parameters tell python this is a test, a
     def test_pub_has_till(self):
         self.assertEqual(100.00, self.pub.till)
 
+    def test_pub_has_drinks(self):
+        self.assertEqual([], self.pub.drink)
+
     def test_till_updated(self):
         self.assertEqual(108, self.pub.add_to_till(self.drink))
 
