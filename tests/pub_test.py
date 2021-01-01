@@ -13,6 +13,9 @@ class TestPub(unittest.TestCase):#these parameters tell python this is a test, a
 
     def test_pub_has_name(self):
         self.assertEqual("The Prancing Pony", self.pub.name)
+    
+    def test_pub_has_till(self):
+        self.assertEqual(100.00, self.pub.till)
 
     def test_till_updated(self):
         self.assertEqual(108, self.pub.add_to_till(self.drink))
@@ -26,3 +29,4 @@ class TestPub(unittest.TestCase):#these parameters tell python this is a test, a
         self.customer_1.increase_drunkenness(self.drink)
         self.customer_1.increase_drunkenness(self.drink)
         self.assertEqual("Sorry, you're too drunk", self.pub.assess_drunkenness(self.customer_1))
+        self.assertEqual("You're boring and sober", self.pub.assess_drunkenness(self.customer_2))

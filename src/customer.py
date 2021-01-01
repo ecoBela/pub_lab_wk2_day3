@@ -12,3 +12,13 @@ class Customer:
     def increase_drunkenness(self, drink):
         self.drunkenness += drink.alco_level
         return self.drunkenness
+
+    # def sell food
+    #OR
+    # create one function buy_item
+    # add logic: if alco => increase drunkenness
+    #            if food => rejuvenate
+
+    def rejuvenate(self, food):
+        self.drunkenness -= food.rejuv_level
+        return self.drunkenness
